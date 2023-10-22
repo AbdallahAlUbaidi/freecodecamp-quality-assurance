@@ -73,7 +73,8 @@ suite('Functional Tests', function () {
 
 const Browser = require('zombie');
 
-Browser.site = "https://freecodecamp-quality-assurance.onrender.com";
+// Browser.site = "https://freecodecamp-quality-assurance.onrender.com";
+Browser.site = `http://localhost:${process.env.PORT || 3000}`;
 
 
 suite('Functional Tests with Zombie.js', function () {
