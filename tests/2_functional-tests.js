@@ -84,7 +84,7 @@ suite('Functional Tests with Zombie.js', function () {
 
 
   suiteSetup(function (done) {
-    return browser.visit('/', () => {
+    return browser.visit("/", () => {
       browser.assert.text("title", "Quality Assurance with Chai | freeCodeCamp.org");
       done();
     });
@@ -105,7 +105,7 @@ suite('Functional Tests with Zombie.js', function () {
           browser.assert.success();
           browser.assert.text("span#name", "Cristoforo");
           browser.assert.text("span#surname", "Colombo");
-          browser.assert.element("span#dates");
+          browser.assert.elements("span#dates", 1);
           done();
         });
       });
@@ -117,7 +117,7 @@ suite('Functional Tests with Zombie.js', function () {
           browser.assert.success();
           browser.assert.text("span#name", "Amerigo");
           browser.assert.text("span#surname", "Vespucci");
-          browser.assert.element("span#dates");
+          browser.assert.elements("span#dates", 1);
           done();
         });
       });
